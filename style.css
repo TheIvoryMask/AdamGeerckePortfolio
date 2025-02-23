@@ -364,6 +364,7 @@ header {
     width: 100%;
     padding: 10px;
     transition: all 0.5s ease-in-out;
+    pointer: cursor;
 }
 
 .nav button:hover {
