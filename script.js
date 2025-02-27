@@ -69,3 +69,41 @@ window.onmousemove = (e) => {
     );
   }
 };
+
+
+// DARKMODE
+
+document.addEventListener('DOMContentLoaded', function() {
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  
+  function updateModeUI(isDarkMode) {
+      if (isDarkMode) {
+          document.body.classList.add('darkmode');
+      } else {
+          document.body.classList.remove('darkmode');
+      }
+  }
+  
+  darkModeToggle.addEventListener('click', function() {
+      const currentlyDark = document.body.classList.contains('darkmode');
+      const newMode = !currentlyDark;
+      
+      updateModeUI(newMode);
+      localStorage.setItem('darkMode', newMode);
+  });
+  
+  const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+  updateModeUI(savedDarkMode);
+});
+
+
+// DOM READY
+let domReady = (cb) => {
+  document.readyState === 'interactive' || document.readyState === 'complete'
+    ? cb()
+    : document.addEventListener('DOMContentLoaded', cb);
+};
+
+domReady(() => {
+  document.body.style.visibility = 'visible';
+});
