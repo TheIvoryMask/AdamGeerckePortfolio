@@ -20,6 +20,12 @@
                 <a href="#writing"><button>Writing</button></a>
                 <a href="#photography"><button>Photography</button></a>
                 <a href="#projects"><button>Projects</button></a>
+                <div class="darkmode-container">               
+                    <button id="dark-mode-toggle">
+                        <img id="darkmode-img" class="sm-icons" src="images/Darkmode/accrescent-svgrepo-com.svg">
+                        <img id="lightmode-img" class="sm-icons" src="images/Darkmode/sun-svgrepo-com.svg">
+                    </button>
+                </div>
             </div>
             
         </header>
@@ -35,8 +41,8 @@
                      <img src="images/adam.jpg">
                 <div class="sm-icons">
                     <a href="https://theivorymask.wordpress.com" target="_blank"><img src="images/Icons/wordpress-color-svgrepo-com.svg"></a>
-                    <a href="https://www.instagram.com/__dv495/" target="_blank"><img src="images/Icons/instagram-2016-logo-svgrepo-com.svg"></a>
-                    <a href="https://github.com/TheIvoryMask" target="_blank"><img src="images/Icons/github-color-svgrepo-com.svg"></a>
+                    <a href="https://www.instagram.com/__dv495/" target="_blank"><img src="images/icons/instagram-2016-logo-svgrepo-com.svg"></a>
+                    <a href="https://github.com/TheIvoryMask" target="_blank"><img src="images/icons/github-color-svgrepo-com.svg"></a>
                 </div>
 
             </div>
@@ -55,6 +61,7 @@
                         <img src="images/Icons/javascript-js.svg">
                         <img src="images/Icons/react.svg">
                         <img src="images/Icons/tailwind-css.svg">
+                        <img src="images/Icons/sass-svgrepo-com.svg">
                     </div>
                 </div>   
             </div>
@@ -106,8 +113,10 @@
             <div class="photography">
                 <div class="photography-text">    
                 <h1>Photography</h1>
-                <p>Photography is a hobby of mine, and though I've been at it for a few years, there have been considerable jumps between periods of shooting. Below are the three periods I was most active. Click and drag below to see previews, a photography portfolio is in the works.</p>
-                </div>
+                <p>Photography is a hobby of mine, and though I've been at it for a few years, there have been considerable jumps between periods of shooting.</p>
+                <img class="drag-anim sm" src="images/Icons/mouse-svgrepo-com.svg">
+                <p class="drag-hint">Click and drag to explore more</p>
+            </div>
                 <div class="track-container" draggable="false">
                     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
                         <img class="image" src="images/Exchange/331-IMG_0451.jpg" draggable="false">
@@ -119,21 +128,21 @@
                         <img class="image" src="images/Exchange/467-IMG_9315.jpg" draggable="false">
                         <img class="image" src="images/Exchange/471-IMG_9303.jpg" draggable="false">
                         <img class="image" src="images/Exchange/IMG_0461.jpg" draggable="false">
-            
                     </div>
                 </div>
+                <a href="https://theivorymask.github.io/SimplePhotographyPortfolio/" target="_blank"><button>Photography Portfolio</button></a>
             </div>
         </main>
-        <main id="projects" class="projects-container">
+        <div id="projects" class="projects-container">
             
             <h1>Projects</h1>
             <div class="project-card">
                 <div class="project-info">
                     <h1>Weather App</h1>
                     <p>Everyone makes weather apps, I know. But it's a handy tool for displaying an understanding of design, JavaScript and working with APIs.</p>
-                    <div class="sm-icons">
-                    <a href="https://theivorymask.github.io/weather-app1/" target="_blank"><img src="images/Icons/link-minimalistic-svgrepo-com.svg"></a>
-                    <a href="https://github.com/TheIvoryMask/weather-app1" target="_blank"><img src="images/Icons/git-merge-svgrepo-com.svg"></a>
+                    <div class="git sm-icons">
+                        <a href="https://theivorymask.github.io/weather-app1/" target="_blank"><img src="images/Icons/link-minimalistic-svgrepo-com.svg"></a>
+                        <a href="https://github.com/TheIvoryMask/weather-app1" target="_blank"><img src="images/Icons/git-merge-svgrepo-com.svg"></a>
                     </div>  
                     <h6 style="text-align: center;">Tools Used</h6>
                     <div class="sm-icons">
@@ -146,8 +155,28 @@
                 <img src="images/Projects/weather-app.png" class="project-preview">
 
             </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h1>Landing Page</h1>
+                    <p>I made a fairly straightforward landing page for a small business.</p>
+                    <div class="git sm-icons">
+                        <a href="https://theivorymask.github.io/TrainerLandingPage/" target="_blank"><img src="images/Icons/link-minimalistic-svgrepo-com.svg"></a>
+                        <a href="https://github.com/TheIvoryMask/TrainerLandingPage" target="_blank"><img src="images/Icons/git-merge-svgrepo-com.svg"></a>
+                    </div>  
+                    <h6 style="text-align: center;">Tools Used</h6>
+                    <div class="sm-icons">
+                        <img src="images/Icons/file-type-html.svg">
+                        <img src="images/Icons/sass-svgrepo-com.svg">
+                        <img src="images/Icons/javascript-js.svg">  
+                    </div>
+                    
+                </div>
+                <img src="images/Projects/landing-page.png" class="project-preview">
 
-            </main>
+            </div>
+
+
+        </div>
 
 
 
