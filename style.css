@@ -11,7 +11,7 @@
 a {
     text-decoration: none;
     cursor: pointer;
-    color: black;
+    color: inherit;
 }
 
 
@@ -20,21 +20,17 @@ h1, h2 {
     font-weight: 500;  
 }
 
-hr {
-    height: 1px;
-    color: black;
-    width: 50%;
-    align-self: center;
-}
-
 body {
     font-family: "Libre Caslon Display", serif;
+    visibility: hidden;
     font-weight: 500;
     font-size: 18px;
     color: black;
     background: rgb(248, 246, 246);
     overflow-x: hidden;
 }
+
+
 /*          HOME PAGE             */
 
 .container {
@@ -277,13 +273,58 @@ hr {
     font-weight: 200;
     padding: 15px;
     width: fit-content;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: inset 0 10px 20px rgb(0, 0, 0, 0.3);
+    transition: all 0.5s ease-in-out;
 }
 
+
 .photography-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     line-height: 2;
-    width: 500px;
+    max-width: 450px;
+    width: 100%;
     margin: 50px;
     margin-top: 70px;
+}
+
+.photography-text img {
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    animation: dragAnimation 2s infinite;
+}
+
+.photography button:hover {
+    background-color: #c0c0c0;
+}
+
+.drag-hint {
+    font-size: 14px;
+}
+
+@keyframes dragAnimation {
+
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateX(-100px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
 }
 
 
@@ -364,11 +405,16 @@ header {
     width: 100%;
     padding: 10px;
     transition: all 0.5s ease-in-out;
-    pointer: cursor;
 }
 
 .nav button:hover {
     background-color: white;
+}
+
+.nav img {
+    height: 40px;
+    width: 40px;
+    filter: invert();
 }
 
 li {
@@ -436,6 +482,7 @@ ul {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .photography-text {
@@ -472,6 +519,68 @@ ul {
 }
 
 /*          END IMAGE TRACK              */
+
+.darkmode {
+    background: #303030;
+    color: white;
+}
+
+.darkmode .nav {
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+.darkmode .nav button {
+    color: white;
+}
+
+.darkmode .nav button:hover {
+    background: black;
+}
+
+.darkmode-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.darkmode-container img {
+    height: 30px;
+    width: 30px;
+}
+
+.darkmode #darkmode-img {
+    display: none;
+}
+
+.darkmode #lightmode-img {
+    display: flex;
+}
+
+.darkmode .photography-text img {
+    filter: invert(1);
+}
+
+.darkmode .photography button {
+    color: white;
+    background-color: #303030;
+}
+
+.darkmode .photography button:hover {
+    background-color: black;
+}
+
+#darkmode-img {
+    display: flex;
+    filter: invert(0);
+    transition: 0s;
+}
+
+.darkmode .git img {
+    filter: invert(1);
+}
+
+#lightmode-img {
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
 .nav {
@@ -526,13 +635,37 @@ ul {
         height: fit-content;
     }
 
-    #photography {
+    .sm-icons img {
+        filter: saturate(1);
+    }
+
+    .icon-container img {
+        filter: saturate(1);
+    }
+
+    .photography-container {
+        height: 60vh;
+    }
+
+    .photography {
+        height: auto;
+    }
+
+    #photography img {
+        display: none;
+    }
+
+    .track-container {
+        display: none;
+    }
+
+    .drag-hint {
         display: none;
     }
 
     .photography-text {
-        margin-left: 30px;
-        width: 100%;
+        margin-left: 70px;
+        width: 350px;
         max-width: 400px;
     }
 
@@ -563,6 +696,7 @@ ul {
     }
 
     .projects-container {
+        height: auto;
         align-content: center;
         margin-bottom: 20px;
         margin-top: 20px;
